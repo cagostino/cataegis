@@ -5,7 +5,7 @@ import pandas as pd
 from datetime import datetime
 import os
 import numpy as np
-
+###
 datfold = './data/'
 today =  datetime.today().date()
 def getstockopts(stockname,save =True):
