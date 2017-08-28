@@ -7,11 +7,11 @@ import os
 import numpy as np
 
 datfold = './data/'
-today = datetime(2015,8,24)# datetime.today().date()
+today =  datetime.today().date()
 def getstockopts(stockname,save =True):
 	opts = Options(stockname,'yahoo')
 	expirydates = opts.expiry_dates
-	dateexp = '2017-12-15'
+	dateexp = datetime(2017,12,15)#manually set to this
 	calldata = opts.get_call_data(expiry=dateexp)
 	putdata = opts.get_put_data(expiry=dateexp)
 	prices = web.DataReader(stockname,'yahoo',today)
